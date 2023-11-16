@@ -10,9 +10,6 @@ As part of the CS567 course, I undertook a project that involved the application
 ## Table of Contents
 - [Repository Structure](#repository-structure)
 - [How to Use](#how-to-use)
-- [Tools](#tools)
-  - [TSTL](#tstl)
-  - [MutPy](#mutpy)
 
 ## Repository Structure
 This repository is organized into two main folders:
@@ -25,22 +22,18 @@ This repository is organized into two main folders:
 
 ## How to Use
 1. **tstl and universalmutator**
-Inside the folder [src_code/tstl](./src_code/tstl)
+Source files are inside the folder [src_code/tstl](./src_code/tstl)
 - install tstl and universalmutator: ``` pip install tstl universalmutator ```
-- in command line:
+- in command line environment:
   - run ``` mkdir mutants ``` to create the directory named 'mutants' to store all of the mutant files.
-  - run tstl test_myCode.tstl
-  - run mutate myCode.py --mutantDir mutants
-  - run analyze_mutants myCode.py "tstl_rt --timeout 120" --mutantDir mutants --verbose
+  - run ```tstl test_myCode.tstl``` to generate harness core for testing.
+  - run ```mutate myCode.py --mutantDir mutants``` to generates mutants for myCode.py and stores them inside directory 'mutants'
+  - run ```analyze_mutants myCode.py "tstl_rt --timeout 120" --mutantDir mutants --verbose``` analyze all mutants from myCode.py
 
 2. **mutpy**
-
-
-### Prerequisites
-
-List any prerequisites or dependencies that users need to install before using your project.
-
-```bash
-# Example:
-pip install -r requirements.txt
-```
+Source files are inside the folder [src_code/tstl](./src_code/mutpy)
+- install mutpy: ```pip install mutpy```
+- in command line environment:
+  - run ```mkdir -p report``` to create a directory to store all of the .html reports.
+  - run ```mut.py --target myCode --unit-test test_myCode --show-mutants --report-html report --timeout-factor 30 --experimental-operators --colored-output``` to analyze all the mutants from myCode.py by using testing file test_myCode.py
+  - all of the reports are stored in 'report' directory.
