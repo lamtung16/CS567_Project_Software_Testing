@@ -1,5 +1,5 @@
 # CS567 - Software Testing
-As part of the CS567 course, I undertook a project that involved the application of mutation testing technique to evaluate simple Python code. Leveraging the testing tools TSTL, universalmutator and MutPy, I aimed to enhance the reliability and robustness of the software. This project only deepened my understanding of software testing methodologies.
+As part of the CS567 course, I undertook a project that involved the application of mutation testing technique to evaluate simple Python code. Leveraging the testing tools TSTL, universalmutator and MutPy. This project only deepened my understanding of software testing methodologies.
 
 ## Author
 - [Tung L. Nguyen] - Hello, my name is Tung Nguyen, and I am currently a Ph.D. student at NAU, where I am immersed in the dynamic world of artificial intelligence. My primary focus within this expansive field lies in the realm of natural language processing, specifically with a keen interest in large language models (LLM).
