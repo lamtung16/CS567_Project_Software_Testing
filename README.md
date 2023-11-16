@@ -5,7 +5,7 @@ As part of the CS567 course, I undertook a project that involved the application
 - [Tung L. Nguyen] - Hello, my name is Tung Nguyen, and I am currently a Ph.D. student at NAU, where I am immersed in the dynamic world of artificial intelligence. My primary focus within this expansive field lies in the realm of natural language processing, specifically with a keen interest in large language models (LLM). As a dedicated researcher, I am passionate about exploring the intricate nuances of AI and contributing to the advancement of language understanding. My journey at NAU as a Ph.D. student allows me to delve deep into the complexities of AI, unraveling its potential to reshape the way we interact with technology and perceive the capabilities of intelligent systems.
 
 ## Instructor
-- [Alex Groce] - I am accepting PhD students to my software testing research group at Northern Arizona University (for Spring 2022). Please send resumes and cover letters to Alex.Groce@nau.edu. IMPORTANT NOTE: please do not send unless you have significant research interest in software testing specifically (I don't want people who are simply looking for a place to do a PhD, I want students interested in and aware of the field: if you submit a "random" application, I will likely just ignore it). In particular, bring either experience in testing in industry (with knowledge of code coverage measurement) or background in software engineering or programming languages as an undergraduate (research experience, ideally). Funding is available for good candidates. Python skills and statistical savvy a plus.
+- [Alex Groce] - Associate professor of computer science, software testing researcher; "Thought is a labyrinth."
 
 ## Table of Contents
 - [How to Use](#how-to-use)
