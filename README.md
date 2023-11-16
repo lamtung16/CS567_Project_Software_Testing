@@ -28,10 +28,10 @@ This repository is organized into two main folders:
 Inside the folder [src_code/tstl](./src_code/tstl)
 - install tstl and universalmutator: ``` pip install tstl universalmutator ```
 - in command line:
- - run ``` mkdir mutants ``` to create the directory named 'mutants' to store all of the mutant files.
- - run tstl test_myCode.tstl
- - run mutate myCode.py --mutantDir mutants
- - run analyze_mutants myCode.py "tstl_rt --timeout 120" --mutantDir mutants --verbose
+  - run ``` mkdir mutants ``` to create the directory named 'mutants' to store all of the mutant files.
+  - run tstl test_myCode.tstl
+  - run mutate myCode.py --mutantDir mutants
+  - run analyze_mutants myCode.py "tstl_rt --timeout 120" --mutantDir mutants --verbose
 
 2. **mutpy**
 
