@@ -1,0 +1,334 @@
+[*] Start mutation process:
+   - targets: myCode
+   - tests: test_myCode
+[*] 1 tests passed:
+   - test_myCode [0.00021 s]
+[*] Start mutants generation and execution:
+   - [#   1] AOR myCode: 
+--------------------------------------------------------------------------------
+   8:     for i in range(len(arr)):
+   9:         current_num = arr[i]
+  10:         current_frequency = 1
+  11:         
+- 12:         for j in range(i + 1, len(arr)):
++ 12:         for j in range(i - 1, len(arr)):
+  13:             if arr[j] == current_num:
+  14:                 current_frequency += 1
+  15:         
+  16:         if current_frequency > max_frequency:
+--------------------------------------------------------------------------------
+[0.00561 s] survived
+   - [#   2] ASR myCode: 
+--------------------------------------------------------------------------------
+  10:         current_frequency = 1
+  11:         
+  12:         for j in range(i + 1, len(arr)):
+  13:             if arr[j] == current_num:
+- 14:                 current_frequency += 1
++ 14:                 current_frequency -= 1
+  15:         
+  16:         if current_frequency > max_frequency:
+  17:             most_common_num = current_num
+  18:             max_frequency = current_frequency
+--------------------------------------------------------------------------------
+[0.00672 s] killed by test (test_myCode.CalculatorTest)
+   - [#   3] COD myCode: 
+--------------------------------------------------------------------------------
+   1: def find_most_common_number(arr):
+-  2:     if not arr:
++  2:     if arr:
+   3:         return None
+   4:     
+   5:     most_common_num = None
+   6:     max_frequency = 0
+--------------------------------------------------------------------------------
+[0.00671 s] killed by test (test_myCode.CalculatorTest)
+   - [#   4] COI myCode: 
+--------------------------------------------------------------------------------
+   1: def find_most_common_number(arr):
+-  2:     if not arr:
++  2:     if not ((not arr)):
+   3:         return None
+   4:     
+   5:     most_common_num = None
+   6:     max_frequency = 0
+--------------------------------------------------------------------------------
+[0.00688 s] killed by test (test_myCode.CalculatorTest)
+   - [#   5] COI myCode: 
+--------------------------------------------------------------------------------
+   9:         current_num = arr[i]
+  10:         current_frequency = 1
+  11:         
+  12:         for j in range(i + 1, len(arr)):
+- 13:             if arr[j] == current_num:
++ 13:             if not (arr[j] == current_num):
+  14:                 current_frequency += 1
+  15:         
+  16:         if current_frequency > max_frequency:
+  17:             most_common_num = current_num
+--------------------------------------------------------------------------------
+[0.00746 s] killed by test (test_myCode.CalculatorTest)
+   - [#   6] COI myCode: 
+--------------------------------------------------------------------------------
+  12:         for j in range(i + 1, len(arr)):
+  13:             if arr[j] == current_num:
+  14:                 current_frequency += 1
+  15:         
+- 16:         if current_frequency > max_frequency:
++ 16:         if not (current_frequency > max_frequency):
+  17:             most_common_num = current_num
+  18:             max_frequency = current_frequency
+  19:     
+  20:     return most_common_num
+--------------------------------------------------------------------------------
+[0.00683 s] killed by test (test_myCode.CalculatorTest)
+   - [#   7] OIL myCode: 
+--------------------------------------------------------------------------------
+  15:         
+  16:         if current_frequency > max_frequency:
+  17:             most_common_num = current_num
+  18:             max_frequency = current_frequency
+- 19:     
++ 19:         break
+  20:     return most_common_num
+--------------------------------------------------------------------------------
+[0.00690 s] killed by test (test_myCode.CalculatorTest)
+   - [#   8] OIL myCode: 
+--------------------------------------------------------------------------------
+  11:         
+  12:         for j in range(i + 1, len(arr)):
+  13:             if arr[j] == current_num:
+  14:                 current_frequency += 1
+- 15:         
++ 15:             break
+  16:         if current_frequency > max_frequency:
+  17:             most_common_num = current_num
+  18:             max_frequency = current_frequency
+  19:     
+--------------------------------------------------------------------------------
+[0.00686 s] killed by test (test_myCode.CalculatorTest)
+   - [#   9] RIL myCode: 
+--------------------------------------------------------------------------------
+   4:     
+   5:     most_common_num = None
+   6:     max_frequency = 0
+   7:     
+-  8:     for i in range(len(arr)):
++  8:     for i in reversed(range(len(arr))):
+   9:         current_num = arr[i]
+  10:         current_frequency = 1
+  11:         
+  12:         for j in range(i + 1, len(arr)):
+--------------------------------------------------------------------------------
+[0.00695 s] killed by test (test_myCode.CalculatorTest)
+   - [#  10] RIL myCode: 
+--------------------------------------------------------------------------------
+   8:     for i in range(len(arr)):
+   9:         current_num = arr[i]
+  10:         current_frequency = 1
+  11:         
+- 12:         for j in range(i + 1, len(arr)):
++ 12:         for j in reversed(range(i + 1, len(arr))):
+  13:             if arr[j] == current_num:
+  14:                 current_frequency += 1
+  15:         
+  16:         if current_frequency > max_frequency:
+--------------------------------------------------------------------------------
+[0.00863 s] survived
+   - [#  11] ROR myCode: 
+--------------------------------------------------------------------------------
+   9:         current_num = arr[i]
+  10:         current_frequency = 1
+  11:         
+  12:         for j in range(i + 1, len(arr)):
+- 13:             if arr[j] == current_num:
++ 13:             if arr[j] != current_num:
+  14:                 current_frequency += 1
+  15:         
+  16:         if current_frequency > max_frequency:
+  17:             most_common_num = current_num
+--------------------------------------------------------------------------------
+[0.00687 s] killed by test (test_myCode.CalculatorTest)
+   - [#  12] ROR myCode: 
+--------------------------------------------------------------------------------
+  12:         for j in range(i + 1, len(arr)):
+  13:             if arr[j] == current_num:
+  14:                 current_frequency += 1
+  15:         
+- 16:         if current_frequency > max_frequency:
++ 16:         if current_frequency < max_frequency:
+  17:             most_common_num = current_num
+  18:             max_frequency = current_frequency
+  19:     
+  20:     return most_common_num
+--------------------------------------------------------------------------------
+[0.00691 s] killed by test (test_myCode.CalculatorTest)
+   - [#  13] ROR myCode: 
+--------------------------------------------------------------------------------
+  12:         for j in range(i + 1, len(arr)):
+  13:             if arr[j] == current_num:
+  14:                 current_frequency += 1
+  15:         
+- 16:         if current_frequency > max_frequency:
++ 16:         if current_frequency >= max_frequency:
+  17:             most_common_num = current_num
+  18:             max_frequency = current_frequency
+  19:     
+  20:     return most_common_num
+--------------------------------------------------------------------------------
+[0.00705 s] killed by test (test_myCode.CalculatorTest)
+   - [#  14] SDL myCode: 
+--------------------------------------------------------------------------------
+   1: def find_most_common_number(arr):
+   2:     if not arr:
+-  3:         return None
++  3:         pass
+   4:     
+   5:     most_common_num = None
+   6:     max_frequency = 0
+   7:     
+--------------------------------------------------------------------------------
+[0.00598 s] survived
+   - [#  15] SDL myCode: 
+--------------------------------------------------------------------------------
+   1: def find_most_common_number(arr):
+   2:     if not arr:
+   3:         return None
+   4:     
+-  5:     most_common_num = None
++  5:     pass
+   6:     max_frequency = 0
+   7:     
+   8:     for i in range(len(arr)):
+   9:         current_num = arr[i]
+--------------------------------------------------------------------------------
+[0.00593 s] survived
+   - [#  16] SDL myCode: 
+--------------------------------------------------------------------------------
+   2:     if not arr:
+   3:         return None
+   4:     
+   5:     most_common_num = None
+-  6:     max_frequency = 0
++  6:     pass
+   7:     
+   8:     for i in range(len(arr)):
+   9:         current_num = arr[i]
+  10:         current_frequency = 1
+--------------------------------------------------------------------------------
+[0.00729 s] killed by test (test_myCode.CalculatorTest)
+   - [#  17] SDL myCode: 
+--------------------------------------------------------------------------------
+   5:     most_common_num = None
+   6:     max_frequency = 0
+   7:     
+   8:     for i in range(len(arr)):
+-  9:         current_num = arr[i]
++  9:         pass
+  10:         current_frequency = 1
+  11:         
+  12:         for j in range(i + 1, len(arr)):
+  13:             if arr[j] == current_num:
+--------------------------------------------------------------------------------
+[0.01110 s] killed by test (test_myCode.CalculatorTest)
+   - [#  18] SDL myCode: 
+--------------------------------------------------------------------------------
+   6:     max_frequency = 0
+   7:     
+   8:     for i in range(len(arr)):
+   9:         current_num = arr[i]
+- 10:         current_frequency = 1
++ 10:         pass
+  11:         
+  12:         for j in range(i + 1, len(arr)):
+  13:             if arr[j] == current_num:
+  14:                 current_frequency += 1
+--------------------------------------------------------------------------------
+[0.00699 s] killed by test (test_myCode.CalculatorTest)
+   - [#  19] SDL myCode: 
+--------------------------------------------------------------------------------
+  13:             if arr[j] == current_num:
+  14:                 current_frequency += 1
+  15:         
+  16:         if current_frequency > max_frequency:
+- 17:             most_common_num = current_num
++ 17:             pass
+  18:             max_frequency = current_frequency
+  19:     
+  20:     return most_common_num
+--------------------------------------------------------------------------------
+[0.00692 s] killed by test (test_myCode.CalculatorTest)
+   - [#  20] SDL myCode: 
+--------------------------------------------------------------------------------
+  14:                 current_frequency += 1
+  15:         
+  16:         if current_frequency > max_frequency:
+  17:             most_common_num = current_num
+- 18:             max_frequency = current_frequency
++ 18:             pass
+  19:     
+  20:     return most_common_num
+--------------------------------------------------------------------------------
+[0.00731 s] killed by test (test_myCode.CalculatorTest)
+   - [#  21] SDL myCode: 
+--------------------------------------------------------------------------------
+  16:         if current_frequency > max_frequency:
+  17:             most_common_num = current_num
+  18:             max_frequency = current_frequency
+  19:     
+- 20:     return most_common_num
++ 20:     pass
+--------------------------------------------------------------------------------
+[0.00687 s] killed by test (test_myCode.CalculatorTest)
+   - [#  22] ZIL myCode: 
+--------------------------------------------------------------------------------
+   5:     most_common_num = None
+   6:     max_frequency = 0
+   7:     
+   8:     for i in range(len(arr)):
+-  9:         current_num = arr[i]
+- 10:         current_frequency = 1
+- 11:         
+- 12:         for j in range(i + 1, len(arr)):
+- 13:             if arr[j] == current_num:
+- 14:                 current_frequency += 1
+- 15:         
+- 16:         if current_frequency > max_frequency:
+- 17:             most_common_num = current_num
+- 18:             max_frequency = current_frequency
++  9:         break
++ 10:     
++ 11:     
++ 12:     
++ 13:     
++ 14:     
++ 15:     
++ 16:     
++ 17:     
++ 18:     
+  19:     
+  20:     return most_common_num
+--------------------------------------------------------------------------------
+[0.00688 s] killed by test (test_myCode.CalculatorTest)
+   - [#  23] ZIL myCode: 
+--------------------------------------------------------------------------------
+   9:         current_num = arr[i]
+  10:         current_frequency = 1
+  11:         
+  12:         for j in range(i + 1, len(arr)):
+- 13:             if arr[j] == current_num:
+- 14:                 current_frequency += 1
++ 13:             break
++ 14:         
+  15:         
+  16:         if current_frequency > max_frequency:
+  17:             most_common_num = current_num
+  18:             max_frequency = current_frequency
+--------------------------------------------------------------------------------
+[0.00687 s] killed by test (test_myCode.CalculatorTest)
+[*] Mutation score [0.60849 s]: 82.6%
+   - all: 23
+   - killed: 19 (82.6%)
+   - survived: 4 (17.4%)
+   - incompetent: 0 (0.0%)
+   - timeout: 0 (0.0%)
