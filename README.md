@@ -25,7 +25,7 @@ This repository is organized into two main folders:
 
 ## How to Use
 1. **tstl and universalmutator**
-Inside the folder [scr_code/tstl](./scr_code/tstl)
+Inside the folder [src_code/tstl](./src_code/tstl)
 - install tstl and universalmutator: ``` pip install tstl universalmutator ```
 - in command line, run
 - !mkdir mutants
