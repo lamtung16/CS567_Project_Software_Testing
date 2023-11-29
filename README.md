@@ -28,7 +28,7 @@ Source files are inside the folder [src_code/tstl](./src_code/tstl)
   - run ``` mkdir mutants ``` to create the directory named 'mutants' to store all of the mutant files.
   - run ```tstl test_myCode.tstl``` to generate harness core for testing.
   - run ```mutate myCode.py --mutantDir mutants``` to generates mutants for myCode.py and stores them inside directory 'mutants'
-  - run ```analyze_mutants myCode.py "tstl_rt --timeout 120" --mutantDir mutants --verbose``` analyze all mutants from myCode.py
+  - run ```analyze_mutants myCode.py "tstl_rt --timeout 2" --mutantDir mutants --verbose``` analyze all mutants from myCode.py
 - More informations:
   - https://github.com/agroce/tstl
   - https://github.com/agroce/universalmutator
